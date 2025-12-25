@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dods",
+  "info": {
+    "singularName": "dod",
+    "pluralName": "dods",
+    "displayName": "dod"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
