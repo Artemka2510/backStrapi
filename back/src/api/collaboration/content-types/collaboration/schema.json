@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "news",
+  "collectionName": "collaborations",
   "info": {
-    "singularName": "new",
-    "pluralName": "news",
-    "displayName": "Новости"
+    "singularName": "collaboration",
+    "pluralName": "collaborations",
+    "displayName": "Сотруднечство"
   },
   "options": {
     "draftAndPublish": true

@@ -430,10 +430,44 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCollaborationCollaboration
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'collaborations';
+  info: {
+    displayName: '\u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0435\u0447\u0441\u0442\u0432\u043E';
+    pluralName: 'collaborations';
+    singularName: 'collaboration';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::collaboration.collaboration'
+    > &
+      Schema.Attribute.Private;
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDodDod extends Struct.CollectionTypeSchema {
   collectionName: 'dods';
   info: {
-    displayName: 'dod';
+    displayName: '\u0414\u043D\u0438 \u043E\u0442\u043A\u0440\u044B\u0442\u044B\u0445 \u0434\u0432\u0435\u0440\u0435\u0439';
     pluralName: 'dods';
     singularName: 'dod';
   };
@@ -463,7 +497,7 @@ export interface ApiDodDod extends Struct.CollectionTypeSchema {
 export interface ApiNewNew extends Struct.CollectionTypeSchema {
   collectionName: 'news';
   info: {
-    displayName: 'news';
+    displayName: '\u041D\u043E\u0432\u043E\u0441\u0442\u0438';
     pluralName: 'news';
     singularName: 'new';
   };
@@ -490,10 +524,43 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPracticePractice extends Struct.CollectionTypeSchema {
+  collectionName: 'practices';
+  info: {
+    displayName: '\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u043E\u0432';
+    pluralName: 'practices';
+    singularName: 'practice';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::practice.practice'
+    > &
+      Schema.Attribute.Private;
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPreparationPreparation extends Struct.CollectionTypeSchema {
   collectionName: 'preparations';
   info: {
-    displayName: 'preparation';
+    displayName: '\u041D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0438';
     pluralName: 'preparations';
     singularName: 'preparation';
   };
@@ -523,10 +590,43 @@ export interface ApiPreparationPreparation extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiScheduleSchedule extends Struct.CollectionTypeSchema {
+  collectionName: 'schedules';
+  info: {
+    displayName: '\u0420\u0430\u0441\u043F\u0438\u0441\u0430\u043D\u0438\u0435';
+    pluralName: 'schedules';
+    singularName: 'schedule';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::schedule.schedule'
+    > &
+      Schema.Attribute.Private;
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSpecialitySpeciality extends Struct.CollectionTypeSchema {
   collectionName: 'specialities';
   info: {
-    displayName: 'speciality';
+    displayName: '\u0421\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438';
     pluralName: 'specialities';
     singularName: 'speciality';
   };
@@ -556,7 +656,7 @@ export interface ApiSpecialitySpeciality extends Struct.CollectionTypeSchema {
 export interface ApiStaffStaff extends Struct.CollectionTypeSchema {
   collectionName: 'staffs';
   info: {
-    displayName: 'staff';
+    displayName: '\u0421\u0442\u0443\u0434\u0435\u043D\u0447\u0438\u0441\u043A\u0438\u0439 \u043E\u0442\u0434\u0435\u043B \u043A\u0430\u0434\u0440\u043E\u0432';
     pluralName: 'staffs';
     singularName: 'staff';
   };
@@ -569,6 +669,39 @@ export interface ApiStaffStaff extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::staff.staff'> &
+      Schema.Attribute.Private;
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiStudentLifeStudentLife extends Struct.CollectionTypeSchema {
+  collectionName: 'student_lives';
+  info: {
+    displayName: '\u0441\u0442\u0443\u0434\u0435\u043D\u0447\u0435\u0441\u043A\u0430\u044F \u0436\u0438\u0437\u043D\u044C';
+    pluralName: 'student-lives';
+    singularName: 'student-life';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::student-life.student-life'
+    > &
       Schema.Attribute.Private;
     media: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -1093,11 +1226,15 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::collaboration.collaboration': ApiCollaborationCollaboration;
       'api::dod.dod': ApiDodDod;
       'api::new.new': ApiNewNew;
+      'api::practice.practice': ApiPracticePractice;
       'api::preparation.preparation': ApiPreparationPreparation;
+      'api::schedule.schedule': ApiScheduleSchedule;
       'api::speciality.speciality': ApiSpecialitySpeciality;
       'api::staff.staff': ApiStaffStaff;
+      'api::student-life.student-life': ApiStudentLifeStudentLife;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "news",
+  "collectionName": "practices",
   "info": {
-    "singularName": "new",
-    "pluralName": "news",
-    "displayName": "Новости"
+    "singularName": "practice",
+    "pluralName": "practices",
+    "displayName": "Практика студентов"
   },
   "options": {
     "draftAndPublish": true
@@ -13,9 +13,6 @@
   "attributes": {
     "title": {
       "type": "string"
-    },
-    "text": {
-      "type": "richtext"
     },
     "media": {
       "type": "media",
@@ -26,6 +23,9 @@
         "videos",
         "audios"
       ]
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }
